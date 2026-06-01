@@ -1,0 +1,390 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><title>打造你的AI雙人小隊-學生手冊</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "PingFang TC","Microsoft JhengHei","Heiti TC","Noto Sans TC",sans-serif;
+  color:#1A1A1A; line-height:1.75; font-size:11.5pt; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.cover { height: 250mm; display:flex; flex-direction:column; justify-content:center;
+  align-items:center; text-align:center; background:#F4ECD8; border-radius:8px; page-break-after:always; }
+.cover .drop { font-size:56pt; }
+.cover .ct { font-size:34pt; color:#0E7C7B; margin:6pt 0 2pt; border:none; }
+.cover .cs { font-size:15pt; color:#1A1A1A; margin:0 0 18pt; }
+.cover .cm { font-size:11pt; color:#0E7C7B; }
+.cover .cf { font-size:10pt; color:#777; margin-top:30pt; }
+.doc { page-break-before: always; }
+h1 { font-size:21pt; color:#0E7C7B; border-bottom:3px solid #D9A441; padding-bottom:6px; margin-top:0; }
+h2 { font-size:15.5pt; color:#0E7C7B; margin-top:20px; border-left:5px solid #D9A441; padding-left:10px; }
+h3 { font-size:13pt; color:#1A1A1A; margin-top:16px; }
+p { margin:7px 0; }
+a { color:#0E7C7B; text-decoration:none; }
+strong { color:#0E7C7B; }
+code { background:#f2ede0; padding:1px 5px; border-radius:4px; font-size:10pt;
+  font-family:"SF Mono",Menlo,Consolas,monospace; color:#7a4a00; }
+pre { background:#1A1A1A; color:#F4ECD8; padding:11px 14px; border-radius:8px;
+  overflow-x:auto; page-break-inside:avoid; }
+pre code { background:none; color:#F4ECD8; padding:0; font-size:9.5pt; }
+blockquote { border-left:4px solid #0E7C7B; background:#f6f1e6; margin:10px 0;
+  padding:7px 14px; border-radius:0 6px 6px 0; color:#333; }
+table { border-collapse:collapse; width:100%; margin:12px 0; font-size:10pt; page-break-inside:avoid; }
+th,td { border:1px solid #d8cdb0; padding:6px 9px; text-align:left; vertical-align:top; }
+th { background:#0E7C7B; color:#fff; }
+tr:nth-child(even) td { background:#faf6ec; }
+hr { border:none; border-top:1px dashed #c9bd9e; margin:18px 0; }
+ul,ol { margin:6px 0 6px 4px; padding-left:22px; }
+li { margin:3px 0; }
+</style></head><body><section class="cover"><div class="drop">💧</div><h1 class="ct">打造你的 AI 雙人小隊</h1><p class="cs">不用寫程式，學會當 AI 團隊的小隊長</p><p class="cm">通識課學生手冊 ｜ 學生講義 ＋ 安裝設定指南 ＋ 給 AI 的指令包</p><p class="cf">國立東華大學 洄瀾學院通識教育中心 ｜ 洄瀾鏡像團隊 出品</p></section>
+<section class="doc"><h1>學生講義｜打造你的 AI 雙人小隊</h1>
+<blockquote>
+<p>這堂課，你不用會寫程式。你要學的是一件更厲害的事：<strong>怎麼當一個 AI 小隊的小隊長。</strong>
+上完課，你的電腦裡會住著兩個會自己分工、互相交接、一起把事情做完的 AI 夥伴。</p>
+</blockquote>
+<hr />
+<h2>一、先聽一個故事</h2>
+<p>有一位東華大學的老師，養了一組 AI 夥伴，他幫它們取了花蓮溪流的名字：</p>
+<ul>
+<li><strong>洄瀾</strong>——組長，負責想清楚要做什麼、分配工作、最後把關。</li>
+<li><strong>立霧</strong>——隊員，手很快，擅長畫圖、上網查資料。</li>
+<li><strong>秀姑巒</strong>——隊員，擅長同時開很多分身、把大任務拆成小塊一起做。</li>
+</ul>
+<p>奇妙的地方是：<strong>這三個 AI 從來不直接講話。</strong></p>
+<p>它們共用<strong>同一個資料夾</strong>。組長把今天要做的事寫成一張紙條，放進一個叫 <code>inbox</code>（收件匣）的格子；隊員打開資料夾看到紙條，做完之後把成品放進 <code>outbox</code>（寄件匣），再留一行字：「我做完了，這裡要注意。」組長回來收，檢查好，交給老師。</p>
+<p>聽起來像不像一間小公司？對——<strong>這就是你這堂課要親手打造的東西，只是縮小成兩個人。</strong></p>
+<hr />
+<h2>二、你會做出什麼？（成品長這樣）</h2>
+<p>你會在自己的電腦上養出<strong>兩個 AI 夥伴</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>跑在哪個 AI 上</th>
+<th>工作</th>
+<th>名字（範例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>領隊</strong></td>
+<td>OpenAI Codex</td>
+<td>聽你下指令、想計畫、把任務分給隊員、最後檢查（還會「電腦操作」當你的雙手——進階玩法）</td>
+<td>例如「<strong>洄瀾</strong>」</td>
+</tr>
+<tr>
+<td><strong>隊員</strong></td>
+<td>Google Antigravity（<code>agy</code>）</td>
+<td>接任務、實際動手做、把成品交回去</td>
+<td>例如「<strong>太魯閣</strong>」</td>
+</tr>
+</tbody>
+</table>
+<p>它們透過一個<strong>共用資料夾</strong>互相傳紙條，你只要對<strong>領隊</strong>說一句話，就能看著兩個 AI 自己把事情接力完成。</p>
+<blockquote>
+<p><strong>這兩個夥伴是你的——名字、個性、專長你自己設計。</strong> 設定時 AI 會一題一題訪問你（要叫什麼、什麼個性、想拿來做什麼），你自己決定；懶得想就答「都好」，用預設名：領隊<strong>洄瀾</strong>、隊員<strong>太魯閣</strong>（都是花蓮的名字——洄瀾是花蓮的古名、太魯閣是那座有名的峽谷；領隊借用老師團隊那位統籌者洄瀾的名字）。名字也可以換成你家鄉的河、山、海，或任何你喜歡的——<strong>有名字、有個性，它才像一個「夥伴」，不是一個冷冰冰的工具。</strong></p>
+</blockquote>
+<hr />
+<h2>三、它們到底怎麼「對話」？（最重要的觀念）</h2>
+<p>很多人以為「讓兩個 AI 合作」要很高深的技術。其實核心觀念簡單到不可思議：</p>
+<blockquote>
+<p><strong>它們不直接對話，而是共用一個資料夾、互相留紙條。</strong></p>
+</blockquote>
+<p>想像一間辦公室裡有三個格子：</p>
+<pre><code>       共用資料夾
+   ┌─────────────────────┐
+   │  📥 inbox（收件匣）  │ ← 領隊把「要做的任務」放這
+   │  📤 outbox（寄件匣） │ ← 隊員把「做好的成品」放這
+   │  📚 shared（共用區） │ ← 兩個人都會看的長期資料
+   └─────────────────────┘
+</code></pre>
+<p>流程就像接力賽：</p>
+<ol>
+<li><strong>你（小隊長）</strong>對<strong>領隊</strong>說：「幫我把這次花蓮小旅行排成三天兩夜行程。」</li>
+<li><strong>領隊</strong>想一下，把任務寫成紙條丟進 <code>inbox</code>，然後跟你說：「派好了，去叫隊員開工吧。」</li>
+<li><strong>你</strong>轉頭叫<strong>隊員</strong>：他看到紙條，動手查、整理，把成品放進 <code>outbox</code>，跟你說：「做好了，請你回去叫領隊檢查。」</li>
+<li><strong>你</strong>回去叫<strong>領隊</strong>收成品、檢查、潤飾，交給你。</li>
+</ol>
+<p>你就像一個小隊長，在兩個夥伴之間<strong>傳遞棒子</strong>——這樣整個團隊你看得到、也指揮得到。</p>
+<blockquote>
+<p>想更省事？也可以叫領隊用「<strong>全自動模式</strong>」：它自己叫隊員、自己收尾，你只跟領隊講話就好。<strong>手動接力</strong>（你親自傳棒）和<strong>全自動</strong>兩種玩法課堂都會教，你自己選。</p>
+</blockquote>
+<p><strong>這就是「多代理人協作」(multi-agent collaboration)——2026 年最重要的 AI 技能之一。</strong></p>
+<hr />
+<h2>四、那一份「團隊公約」是靈魂</h2>
+<p>兩個 AI 怎麼知道自己是誰、該做什麼、紙條放哪裡？</p>
+<p>靠資料夾裡一份叫 <strong><code>AGENTS.md</code></strong> 的文字檔——可以把它想成<strong>團隊的「員工守則」</strong>。每個 AI 一開機，第一件事就是讀這份守則，於是它就知道：</p>
+<ul>
+<li>我是領隊還是隊員？</li>
+<li>我的個性、講話風格是什麼？</li>
+<li>任務紙條放哪個格子、成品放哪個格子？</li>
+<li>交接的時候要留什麼話？</li>
+</ul>
+<p>你不用從零寫這份守則——本教材的 <code>範本團隊/</code> 資料夾裡已經幫你準備好範本，你只要<strong>改名字、改個性</strong>就能用。</p>
+<hr />
+<h2>五、你在這堂課真正學到的東西</h2>
+<p>你以為你在「裝軟體」，其實你在練三個未來很值錢的能力：</p>
+<ol>
+<li><strong>把一件大事拆成小任務</strong>——這是管理的本質。</li>
+<li><strong>把需求講清楚</strong>——AI 做得好不好，七成看你問得清不清楚。</li>
+<li><strong>指揮一個團隊、檢查成果</strong>——你是小隊長，不是工人。</li>
+</ol>
+<blockquote>
+<p>寫程式會被 AI 取代，但<strong>「會指揮 AI 的人」不會。</strong> 這堂課練的就是後者。</p>
+</blockquote>
+<hr />
+<h2>六、接下來</h2>
+<p>➡️ 打開 <strong><code>02_安裝設定指南.md</code></strong>，跟著一步一步把你的雙人小隊裝起來。
+全程免費、有中文、不用寫一行程式。</p>
+<p>卡關了？打開 <strong><code>04_給AI的指令包.md</code></strong>，把裡面的字整段複製、貼給 AI，請它自己幫你修。</p>
+<hr /></section>
+<section class="doc"><h1>安裝設定指南｜把你的 AI 雙人小隊裝起來</h1>
+<blockquote>
+<p>給東華大學通識課的同學。<strong>不用寫程式</strong>，而且這版<strong>以桌面 app（滑鼠操作）為主</strong>——像平常用 app 一樣點一點就好。
+精神：<strong>能交給 AI 做的就交給 AI 做</strong>（設定資料夾、甚至幫你設計角色）。你只負責「登入自己的帳號」和「下指令」。
+全程約 <strong>20–30 分鐘</strong>。桌面步驟經隊員/領隊查官方文件確認過。</p>
+</blockquote>
+<hr />
+<h2>最快的開始方式：讓 AI 讀這份指南、帶你裝</h2>
+<ul>
+<li><strong>方式一（最省事）：讓 AI 讀整包教材、手把手帶你。</strong>
+  把這門課的 GitHub 網址（老師會給）或這個資料夾交給你手邊任何一個 AI，跟它說：<blockquote>
+<p>「請讀這個 repo 裡的 <code>02_安裝設定指南.md</code> 和 <code>AGENTS.md</code>，一步一步幫我把『AI 雙人小隊』裝起來。需要我登入帳號或做決定時，停下來問我。全程繁體中文台灣用語。」
+注意：網頁版 AI（ChatGPT／Gemini）沒有手、不能直接操作你的電腦，它會當「導航」，把該按的、該貼的告訴你，你照著點就好。</p>
+</blockquote>
+</li>
+<li><strong>方式二：自己照下面步驟做。</strong></li>
+</ul>
+<hr />
+<h2>核心觀念：一個「專案資料夾」，兩個夥伴都開它 🔑</h2>
+<p>你的小隊住在<strong>一個資料夾</strong>裡——這就是你的「<strong>專案資料夾</strong>」。
+<strong>領隊和隊員都要打開「同一個這個資料夾」</strong>，才傳得到紙條、才合作得起來。<strong>全班最常卡的就是兩邊開到不同資料夾。</strong></p>
+<h3>📂 「我的小隊」資料夾怎麼來？——交給領隊 Codex 建</h3>
+<p>別擔心怎麼下載、怎麼複製、怎麼改名。等一下你<strong>裝好領隊 Codex、登入</strong>，<strong>貼一句話（咒語 0）給它</strong>，它就會自動幫你：下載這門課的教材、建好你桌面的「<strong>我的小隊</strong>」資料夾、檢查環境，最後把資料夾路徑印給你。你只要照 <strong>Part A</strong> 做。</p>
+<blockquote>
+<p>這就是這門課的精神：<strong>能交給 AI 做的就交給 AI 做。</strong> 你負責登入帳號、下指令；繁瑣的下載與設定，交給領隊。</p>
+</blockquote>
+<hr />
+<h1>Part A：先請領隊就位、幫你把小隊建起來（Codex app）</h1>
+<blockquote>
+<p>這門課裡 <strong>Codex 是領隊洄瀾</strong>——它能「電腦操作」、也能幫你跑下載與設定，所以讓它先就位、帶起整個小隊。</p>
+</blockquote>
+<ol>
+<li>裝 <strong>Codex app</strong>（官方桌面版），打開後<strong>用你自己的 ChatGPT 帳號登入</strong>（登入你自己來）。</li>
+<li>先讓它開<strong>你的桌面</strong>當臨時工作區：點 <strong>Select a project／選擇專案資料夾</strong>，選「<strong>桌面 Desktop</strong>」（等一下小隊建好再換過去）。</li>
+<li><strong>貼「咒語 0」</strong>（在 <code>04_給AI的指令包.md</code>）給它、送出。它會自動：用 <code>gh repo clone cwstedctw/ai-agent-team-course</code> 下載教材、把裡面的 <code>範本團隊</code> 複製成你桌面的 <strong><code>我的小隊</code></strong>、檢查環境（含 Antigravity 的 <code>agy</code>），最後印出 <strong><code>我的小隊</code></strong> 的完整路徑。<blockquote>
+<p>過程中要你登入或做決定，它會停下來問你。若它說你電腦沒有 <code>gh</code>，照它的話做（它會改用 <code>git clone</code> 或教你裝）。<strong>桌面版 Antigravity 還是你自己裝</strong>（Part C），Codex 只幫你把專案建好。</p>
+</blockquote>
+</li>
+<li><strong>關掉 Codex、再打開一次</strong>，這次 <strong>Select a project 選剛建好的 <code>我的小隊</code></strong>。<blockquote>
+<p>⚠️ <strong>Windows 防呆</strong>：點「Select a project」彈出的「選擇資料夾」視窗<strong>只顯示資料夾、把檔案（如 <code>AGENTS.md</code>）藏起來</strong>。正常！確認選中 <strong><code>我的小隊</code></strong>，點右下角 <strong>「選擇資料夾」</strong> 即可。</p>
+</blockquote>
+</li>
+<li>確認畫面顯示 <strong>Local</strong>；對它說一句（咒語 1）：<code>請先讀這個資料夾的 AGENTS.md，告訴我你的身分。</code> → 它會認出自己是<strong>領隊洄瀾</strong>，並印出專案資料夾路徑。</li>
+</ol>
+<blockquote>
+<p>🛠️ 進階（會用終端機的人才需要）：也可以在 <code>我的小隊</code> 裡直接跑 <code>codex</code>。一般同學用桌面 app 就好。</p>
+</blockquote>
+<hr />
+<h1>Part B：讓領隊設計你的小隊</h1>
+<p>在 Codex（領隊洄瀾）裡，貼這句（複製 <code>04</code> 咒語 2），它會一題一題問你（名字、個性、想做什麼），幫你寫好 <code>AGENTS.md</code> 與人格檔，並把專案資料夾路徑印出來。</p>
+<p><strong>懶得想就每題答「都好」，用預設：領隊洄瀾、隊員太魯閣。</strong></p>
+<blockquote>
+<p>把「設計小隊」交給領隊問你，就是「讓 AI 幫你設定」的精神。</p>
+</blockquote>
+<hr />
+<h1>Part C：讓隊員就位（Antigravity 桌面版 開「同一個」專案資料夾）</h1>
+<blockquote>
+<p>這門課裡 <strong>Antigravity 是隊員太魯閣</strong>。</p>
+</blockquote>
+<ol>
+<li>裝 <strong>Antigravity 桌面版</strong>：到 <a href="https://antigravity.google/download">https://antigravity.google/download</a> 下載安裝（認明<strong>桌面版</strong>，不是開發者 IDE 版）。</li>
+<li>打開它，點「<strong>用 Google 帳號登入</strong>」（免費 Google 帳號就行，登入你自己來）。</li>
+<li>在 Antigravity 裡<strong>打開剛剛那個一模一樣的專案資料夾</strong>（領隊在 Part A 印出來的 <code>我的小隊</code>）。</li>
+<li>對它說一句：<code>請先讀這個資料夾的 AGENTS.md，告訴我你的身分。</code> → 它會認出自己是<strong>隊員太魯閣</strong>。</li>
+</ol>
+<blockquote>
+<p>🛠️ 進階：也可用 CLI——在 <code>我的小隊</code> 資料夾裡跑 <code>agy --add-dir .</code>。</p>
+</blockquote>
+<hr />
+<h1>Part D：開工！選一種模式，下第一個任務</h1>
+<p>你是<strong>小隊長</strong>。開工前，先跟領隊講要用哪種模式：</p>
+<h3>模式一：手動接力（預設，看得見每一棒）</h3>
+<ol>
+<li>跟領隊（Codex）說：<code>這次用手動模式。幫我做一份花蓮一日遊景點清單，三個點各一句。拆好任務寫進 inbox 後叫我去請隊員。</code></li>
+<li>領隊把任務寫進 <code>inbox</code>，叫你去找隊員。</li>
+<li>你切到 <strong>Antigravity（隊員）</strong>：<code>看 inbox 接任務、做完放 outbox、叫我回去找領隊。</code></li>
+<li>你回到 <strong>Codex（領隊）</strong>：<code>收 outbox、檢查、給我總結。</code></li>
+</ol>
+<p>🎉 你剛當了一次小隊長，親手指揮兩個 AI 接力完成一件事——全程只動嘴、沒寫半行程式。</p>
+<h3>模式二：全自動（省事）</h3>
+<p>跟領隊說：<code>這次用自動模式，幫我把整件事跑完、檢查好、直接回報我。</code></p>
+<h3>模式三（進階示範）：領隊用 Computer Use 自己跑完手動接力 ⭐</h3>
+<p>領隊（Codex）能用「<strong>電腦操作（Computer Use）</strong>」當你的雙手——自己切到隊員 Antigravity 的視窗、貼指令、再回收檢查，把手動接力<strong>自動演一遍</strong>給你看。做法見 <code>04</code> 咒語 9。</p>
+<blockquote>
+<p>⚠️ 需要較新的 Windows／Mac；執行時它會<strong>接管你的滑鼠鍵盤、佔住前景</strong>（你會看著它自己動）。<strong>不是每台機器都跑得動，當示範用，不是基本盤。</strong></p>
+<p>兩三種都玩一次，感受差別：<strong>手動＝你掌控、看得見；自動＝快、交給 AI；Computer Use＝看 AI 替你動手。</strong> 這就是「要不要讓人插手」——AI 時代最重要的判斷之一。</p>
+</blockquote>
+<hr />
+<h2>常見卡關</h2>
+<table>
+<thead>
+<tr>
+<th>症狀</th>
+<th>多半是</th>
+<th>解法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隊員看不到領隊放的紙條</td>
+<td>兩個 app 開到<strong>不同資料夾</strong></td>
+<td>各自叫 AI「印出你現在的專案資料夾完整路徑」，兩邊對到一模一樣</td>
+</tr>
+<tr>
+<td>Codex（領隊）登入失敗</td>
+<td>校園網路（proxy）或選錯帳號</td>
+<td>換個網路再試；登入頁選你自己的 ChatGPT 帳號；被用量限制就換帳號或找老師</td>
+</tr>
+<tr>
+<td>領隊在手動模式自己跑去做隊員的活</td>
+<td>沒講清楚模式</td>
+<td>開工第一句明講「用手動模式，寫完 inbox 就停、叫我去找隊員」</td>
+</tr>
+<tr>
+<td>Computer Use 跑不動</td>
+<td>機器較舊或系統不支援</td>
+<td>沒關係，它本來就是進階示範；改用模式一手動接力即可</td>
+</tr>
+</tbody>
+</table>
+<p>還是卡？打開 <code>04_給AI的指令包.md</code>，把對應咒語整段貼給 AI，請它幫你診斷。</p>
+<hr />
+<h2>📌 給 AI 與老師看的技術備註（學生可跳過）</h2>
+<blockquote>
+<p>這段給「幫忙設定的 AI」和老師看——把會影響順不順的細節一次講清。學生不必懂。</p>
+</blockquote>
+<p><strong>角色與環境</strong>
+- <strong>領隊洄瀾＝Codex（跑在 codex）</strong>；<strong>隊員太魯閣＝Antigravity（跑在 agy）</strong>。桌面為主：領隊用 Codex app「Select a project」開專案資料夾、隊員用 Antigravity 桌面版開<strong>同一個</strong>資料夾。CLI 是進階/備援。
+- 兩個 agent <strong>不直接對話</strong>，靠專案資料夾的 <code>workspace/inbox</code>、<code>outbox</code>、<code>shared</code> 傳檔；<strong>兩邊必須是同一個專案資料夾</strong>。
+- 三種模式：手動接力（預設，agent 不互相直呼、棒子交回小隊長）、全自動、Computer Use 示範（進階）。</p>
+<p><strong>安裝與帳號</strong>
+- 領隊 Codex：官方桌面 app＋VS Code/Cursor/Windsurf 擴充（<a href="https://developers.openai.com/codex/app">app</a>、<a href="https://developers.openai.com/codex/ide">ide</a>），會在動工前讀 <code>AGENTS.md</code>（<a href="https://developers.openai.com/codex/guides/agents-md">agents-md</a>）。用 ChatGPT 帳號登入（各方案含免費都能用、只差用量）；校園 proxy 攔 TLS 可能讓 OAuth 失敗，課前在教室網路試一次。CLI 進階：Windows <code>irm https://chatgpt.com/codex/install.ps1 | iex</code>、Mac <code>curl -fsSL https://chatgpt.com/codex/install.sh | sh</code>。
+- 隊員 Antigravity：桌面版（<a href="https://antigravity.google/download">https://antigravity.google/download</a>），任何 Google 帳號（含免費）登入。CLI 進階：Windows <code>irm https://antigravity.google/cli/install.ps1 | iex</code>、Mac <code>curl -fsSL https://antigravity.google/cli/install.sh | bash</code>（裝到使用者資料夾、免系統管理員）。
+- 🪟 Windows 走 CLI 時：裝完任何 CLI 要把所有終端機關掉重開，PATH 才生效（用桌面 app 不會遇到）。</p>
+<p><strong>Computer Use（模式三，進階）</strong>
+- Codex app（v26.527 起）在 <strong>Windows</strong> 可「看畫面、點按鈕、打字」操作桌面程式（<a href="https://developers.openai.com/codex/app/computer-use">Computer Use 文件</a>）。⚠️ Windows 上跑在<strong>使用中的桌面、不能背景跑</strong>，執行時接管前景滑鼠鍵盤；手機遠端管理那套要 Win11 build 26100＋NPU。<strong>所以核心課程不依賴它，只當示範。</strong></p>
+<p><strong>AGENTS.md／身分</strong>
+- codex 與 agy <strong>都讀專案根目錄的 <code>AGENTS.md</code></strong>，開機自動認身分（codex app 選那個資料夾、agy 桌面版開那個資料夾即可）。沒有用 <code>.agents/</code> 子資料夾。
+- 保險起見可叫 agent 第一句報到時「印出專案資料夾完整路徑」，確認兩邊同一個。</p>
+<p><strong>已實測（2026-05-30，Mac）</strong>：兩個 agent 透過 inbox/outbox 互傳紙條的整條鏈跑通（角色對調前測的，機制相同）。</p>
+<hr /></section>
+<section class="doc"><h1>給 AI 的指令包｜把事情交給 AI 做</h1>
+<blockquote>
+<p>用法：下面每段是一個「咒語」。<strong>整段複製</strong>，貼進你正在用的 AI（領隊洄瀾＝Codex、隊員太魯閣＝Antigravity，桌面 app 或終端機都行），按 Enter，請它幫你做。
+咒語裡的「洄瀾／太魯閣」是預設名，你改過就跟著換。<strong>你（學生）＝小隊長。</strong></p>
+</blockquote>
+<hr />
+<h2>咒語 0：請領隊把我的小隊裝起來（第一步，貼給剛裝好＋登入的 Codex）⭐</h2>
+<blockquote>
+<p>貼給<strong>領隊 Codex</strong>（這時它開在你的「桌面」當臨時工作區）。它會幫你下載教材、建好「我的小隊」。
+桌面版 Antigravity 還是你自己裝（見指南 Part C），這條只負責把專案建好。</p>
+</blockquote>
+<pre><code>請幫我把這門課的「AI 雙人小隊」設定好，一步一步做、需要我決定時停下來問我：
+1. 在我的桌面下載這門課教材：執行 gh repo clone cwstedctw/ai-agent-team-course
+   （若我這台沒有 gh，改用 git clone https://github.com/cwstedctw/ai-agent-team-course.git，
+    或先告訴我怎麼裝 gh）。
+2. 進到下載好的資料夾，把裡面的「範本團隊」整包複製到我的桌面，改名為「我的小隊」。
+3. 檢查我這台有沒有 Antigravity 的命令列 agy；沒有的話只要告訴我即可
+   （桌面版 Antigravity 我會自己去 antigravity.google/download 裝，不用你裝）。
+4. 把「我的小隊」資料夾的完整路徑印出來給我（等一下兩個 app 都要開這個資料夾）。
+做完用白話告訴我下一步：關掉你、再打開、Select a project 選「我的小隊」。全程繁體中文台灣用語。
+</code></pre>
+<hr />
+<h2>咒語 1：報到＋確認環境＋印出專案資料夾路徑</h2>
+<blockquote>
+<p>貼給<strong>領隊洄瀾（Codex）</strong>。</p>
+</blockquote>
+<pre><code>你是領隊。請先讀這個資料夾的 AGENTS.md，跟我（小隊長）報到一句，
+把這個專案資料夾的完整路徑印出來給我（等一下隊員要開同一個資料夾），
+並確認你能讀寫 workspace/inbox、outbox、shared 三個格子。
+遇到要我登入帳號或做決定時，停下來告訴我。全程繁體中文台灣用語。
+</code></pre>
+<hr />
+<h2>咒語 2：讓 AI 訪談我、設計我的小隊 ⭐</h2>
+<blockquote>
+<p>貼給<strong>領隊洄瀾（Codex）</strong>。</p>
+</blockquote>
+<pre><code>我想設計一個我自己的 AI 雙人小隊。請你「一題一題問我」，問完幫我把設定寫進這個專案資料夾的
+AGENTS.md、領隊人格檔、隊員人格檔：
+1. 領隊要叫什麼名字、什麼個性？
+2. 隊員要叫什麼名字、什麼個性？
+3. 我最想用這個小隊做什麼（例如排旅遊行程、做報告、整理筆記）？
+規則：跑在 codex 上的是領隊、跑在 agy 上的是隊員；兩人靠 workspace 底下的 inbox、outbox、shared
+傳紙條；預設「手動接力」模式（可切「全自動」）；全程繁體中文、自然的台灣口語。
+我若答「都好」，就用預設：領隊洄瀾、隊員太魯閣。先問我第一題。
+</code></pre>
+<hr />
+<h2>咒語 3：幫我把專案資料夾從零建起來（沒拿到範本時）</h2>
+<pre><code>請在目前這個資料夾裡，建立一個 AI 雙人小隊的骨架：
+一份 AGENTS.md（寫明：跑在 codex 上的是領隊、跑在 agy 上的是隊員，兩人靠 workspace/inbox、outbox、
+shared 傳紙條；預設「手動接力」模式、可切「全自動」；全程台灣用語），一份領隊人格檔、一份隊員人格檔，
+以及 workspace/inbox、workspace/outbox、workspace/shared 三個資料夾。
+建好後把這個資料夾的完整路徑印出來，並用白話告訴我每個檔案做什麼。繁體中文台灣用語。
+</code></pre>
+<hr />
+<h2>咒語 4：報到＋印出專案資料夾路徑（兩個 AI 各貼一次）</h2>
+<pre><code>請先讀這個資料夾的 AGENTS.md，認出你是領隊還是隊員，跟我（小隊長）報到一句，
+並把這個專案資料夾的完整路徑印出來給我，讓我確認兩個 AI 對著同一個資料夾。
+</code></pre>
+<hr />
+<h2>咒語 5：選模式 ＋ 下第一個任務（給領隊 Codex）</h2>
+<pre><code>這次用「手動接力」模式（你拆好任務寫進 workspace/inbox 後就停下來，叫我去請隊員開工，
+不要自己叫隊員）。任務：幫我做一份花蓮一日遊景點清單，三個點、每點一句，要好看清楚。
+請先把任務拆好寫進 workspace/inbox，再告訴我下一步去叫誰。全程繁體中文。
+</code></pre>
+<blockquote>
+<p>想省事？把第一行改成「這次用<strong>全自動</strong>模式（你自己把整件事跑完、檢查好、直接回報我）」。</p>
+</blockquote>
+<hr />
+<h2>咒語 6：叫隊員開工（手動接力模式時，貼給隊員 Antigravity）</h2>
+<pre><code>你是隊員。請看 workspace/inbox 有沒有領隊派的任務；有的話照著做，
+做完把成品放 workspace/outbox 並留一行交接，然後叫我回去請領隊檢查。先回我一句你準備好了。
+</code></pre>
+<hr />
+<h2>咒語 7：成品出來了，幫我檢查（給領隊 Codex）</h2>
+<pre><code>隊員已經把成品放在 workspace/outbox 了。請你（領隊）打開來檢查：
+有沒有照需求做、哪裡可以更好，需要的話幫我潤飾，最後用三句話跟我總結。繁體中文。
+</code></pre>
+<hr />
+<h2>咒語 8：兩邊對不上（隊員看不到領隊的紙條）</h2>
+<pre><code>我想讓兩個 AI 用同一個專案資料夾協作，但隊員看不到領隊放的檔案。
+請幫我診斷：把你現在的專案資料夾完整路徑印出來，
+再告訴我怎麼確認另一邊是不是同一個資料夾、以及怎麼對齊。繁體中文、一步一步、像對長輩說話。
+</code></pre>
+<hr />
+<h2>咒語 9：高階進階玩法——用 Computer Use 自動跑手動接力（演示手動模式自動化）⭐</h2>
+<blockquote>
+<p>貼給<strong>領隊洄瀾（Codex，支援 Computer Use／電腦操作）</strong>。
+這條咒語示範讓領隊扮演「學生的雙手」，在手動模式下自己切換視窗、貼指令並完成完整的手動接力驗收！
+⚠️ 需要較新的 Windows／Mac；執行時會接管你的滑鼠鍵盤、佔住前景。當示範用，不是基本盤。</p>
+</blockquote>
+<pre><code>請用 Computer Use 幫我操作 Antigravity（隊員）視窗，完成一次手動接力流程。
+
+分工：
+- 你（領隊 Codex）：拆任務、寫派工紙條、最後檢查。
+- 隊員 Antigravity：讀取派工紙條、完成成品、寫入 outbox。
+
+任務主題：台北親子半日遊
+
+流程：
+1. 你先把任務拆好，寫入 workspace/inbox/task.md。
+2. 你再用 Computer Use 操作 Antigravity 視窗，把以下指令貼進去並送出：
+   「請讀取 workspace/inbox/task.md，照任務完成成品，放進 workspace/outbox/，並留下 workspace/outbox/handoff.md 交接說明。完成後請停下來，只回報『已完成，可請領隊檢查』。」
+3. 等 Antigravity 完成後，你讀取 workspace/outbox 的成品與 handoff.md。
+4. 你檢查成品是否符合 workspace/inbox/task.md 的規格。
+5. 你最後把審查結果回報給我。
+
+交付格式：Markdown 表格
+表格欄位包含：時間、地點、附近捷運站、活動內容、適合年齡、雨天備案、資料來源
+
+輸出檔案：
+- workspace/outbox/parent-child-halfday.md
+- workspace/outbox/handoff.md
+</code></pre>
+<hr /></section></body></html>

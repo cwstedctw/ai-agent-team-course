@@ -1,0 +1,209 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><title>打造你的AI雙人小隊-教師手冊</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "PingFang TC","Microsoft JhengHei","Heiti TC","Noto Sans TC",sans-serif;
+  color:#1A1A1A; line-height:1.75; font-size:11.5pt; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.cover { height: 250mm; display:flex; flex-direction:column; justify-content:center;
+  align-items:center; text-align:center; background:#F4ECD8; border-radius:8px; page-break-after:always; }
+.cover .drop { font-size:56pt; }
+.cover .ct { font-size:34pt; color:#0E7C7B; margin:6pt 0 2pt; border:none; }
+.cover .cs { font-size:15pt; color:#1A1A1A; margin:0 0 18pt; }
+.cover .cm { font-size:11pt; color:#0E7C7B; }
+.cover .cf { font-size:10pt; color:#777; margin-top:30pt; }
+.doc { page-break-before: always; }
+h1 { font-size:21pt; color:#0E7C7B; border-bottom:3px solid #D9A441; padding-bottom:6px; margin-top:0; }
+h2 { font-size:15.5pt; color:#0E7C7B; margin-top:20px; border-left:5px solid #D9A441; padding-left:10px; }
+h3 { font-size:13pt; color:#1A1A1A; margin-top:16px; }
+p { margin:7px 0; }
+a { color:#0E7C7B; text-decoration:none; }
+strong { color:#0E7C7B; }
+code { background:#f2ede0; padding:1px 5px; border-radius:4px; font-size:10pt;
+  font-family:"SF Mono",Menlo,Consolas,monospace; color:#7a4a00; }
+pre { background:#1A1A1A; color:#F4ECD8; padding:11px 14px; border-radius:8px;
+  overflow-x:auto; page-break-inside:avoid; }
+pre code { background:none; color:#F4ECD8; padding:0; font-size:9.5pt; }
+blockquote { border-left:4px solid #0E7C7B; background:#f6f1e6; margin:10px 0;
+  padding:7px 14px; border-radius:0 6px 6px 0; color:#333; }
+table { border-collapse:collapse; width:100%; margin:12px 0; font-size:10pt; page-break-inside:avoid; }
+th,td { border:1px solid #d8cdb0; padding:6px 9px; text-align:left; vertical-align:top; }
+th { background:#0E7C7B; color:#fff; }
+tr:nth-child(even) td { background:#faf6ec; }
+hr { border:none; border-top:1px dashed #c9bd9e; margin:18px 0; }
+ul,ol { margin:6px 0 6px 4px; padding-left:22px; }
+li { margin:3px 0; }
+</style></head><body><section class="cover"><div class="drop">📘</div><h1 class="ct">打造你的 AI 雙人小隊</h1><p class="cs">教師手冊 ｜ 帶通識生組一支會合作的 AI 小隊</p><p class="cm">教學目標 ＋ 課前準備 ＋ 課堂流程 ＋ 評量 ＋ 現場處理</p><p class="cf">國立東華大學 洄瀾學院通識教育中心 ｜ 洄瀾鏡像團隊 出品</p></section>
+<section class="doc"><h1>教師手冊｜打造你的 AI 雙人小隊</h1>
+<blockquote>
+<p>給授課老師與助教。一堂課（或兩堂連上）帶通識生做出一個會合作的 AI 小隊。
+適用對象：<strong>非資訊科系、零程式基礎</strong>的大學通識生（東華洄瀾學院通識課，如「資訊科技與應用」）。
+環境：學校 <strong>Windows 電腦教室</strong>為主，部分學生帶 <strong>Mac 筆電</strong>。</p>
+</blockquote>
+<hr />
+<h2>一、這堂課的教學目標</h2>
+<p>學生帶得走的不是「會裝軟體」，而是三個能力：</p>
+<ol>
+<li><strong>任務拆解</strong>——把一件大事拆成可交辦的小任務。</li>
+<li><strong>把需求講清楚</strong>——體會「問得清楚，AI 才做得好」。</li>
+<li><strong>指揮與驗收</strong>——當一個小團隊的小隊長，分工、交接、檢查。</li>
+</ol>
+<blockquote>
+<p>核心訊息送給學生：<strong>「會寫程式的人未必不可取代，但會指揮 AI 的人很搶手。」</strong>
+另一個重點：課堂讓學生親手玩<strong>模式</strong>——手動接力（人盯每一棒）vs 全自動（交給 AI）——討論「<strong>要不要讓人插手</strong>」，這是 AI 時代最核心的素養之一。進階班可加碼<strong>模式三（Computer Use）</strong>：領隊 Codex 用電腦操作當學生的雙手、自己跑完手動接力（⚠️ 需較新 Windows／Mac、會接管前景，當示範用、非基本盤）。</p>
+</blockquote>
+<hr />
+<h2>二、課前準備（老師務必先做一次）</h2>
+<ol>
+<li><strong>在電腦教室那台 Windows 機器上</strong>親自照 <code>02_安裝設定指南.md</code>（<strong>桌面 app 為主</strong>）跑一遍：裝好 <strong>Codex app（領隊）</strong> 與 <strong>Antigravity 桌面版（隊員）</strong>、各自登入、用 Codex app 的「<strong>Select a project</strong>」與 Antigravity 都開到<strong>同一個專案資料夾</strong>、跑通一次手動接力。Mac 跟 Windows 有差異，指南最後「給 AI 看的技術備註」有列。</li>
+<li><strong>帳號與網路先確認</strong>（最常見的全班卡關來源）：
+   - 學生用<strong>自己的 ChatGPT 帳號</strong>登入 Codex 即可——各方案（免費、Plus、Pro、學校 Edu…）都能用，只差用量限制；若上課中被限制，請學生換帳號或先看領隊示範。
+   - 校園網路若用 <strong>proxy 攔 TLS</strong>，Codex 的瀏覽器 OAuth 登入可能失敗——請課前在教室網路實測一次登入。</li>
+<li><strong>電腦教室權限</strong>：兩個桌面 app（Antigravity、Codex app）在鎖很緊的 Windows 可能要資訊單位安裝。保險做法：請助教或資訊組<strong>先在教室每台機器裝好這兩個桌面 app</strong>，上課就省掉安裝、直接從「開專案資料夾」開始。</li>
+<li>課堂主流程是<strong>讓學生貼「咒語 0」給領隊 Codex，由它自動 <code>gh clone</code> 教材、把 <code>範本團隊</code> 建成學生桌面的「我的小隊」</strong>（見 <code>02</code> Part A）。⚠️ 若教室網路不穩或擋 GitHub，備援：把 <code>範本團隊/</code> 先壓成 zip／放共用雲端，讓學生直接下載當專案資料夾。</li>
+<li>投影片與課程網站連結在 <code>slides/投影片與課程網頁.md</code>（Claude Design 製，瀏覽器打開即放映）。</li>
+</ol>
+<blockquote>
+<p>💡 <strong>教室存活率建議</strong>：人多、網路不穩時，<strong>安裝這段改成課前作業或由資訊組預裝</strong>，課堂只專注在「設計小隊→下任務→看協作→改造」。能交給 AI 的安裝讓學生在領隊裡叫它幫忙（見 <code>02</code> Part A 與 <code>04</code> 咒語 0：貼一句給領隊 Codex，它自動下載教材、建好「我的小隊」）。</p>
+</blockquote>
+<hr />
+<h2>三、建議課堂流程（90 分鐘版）</h2>
+<table>
+<thead>
+<tr>
+<th>時間</th>
+<th>段落</th>
+<th>老師做什麼</th>
+<th>學生做什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 分</td>
+<td><strong>開場故事</strong></td>
+<td>用投影片講「洄瀾鏡像團隊」的故事，帶出「AI 也能組隊」</td>
+<td>聽、想像</td>
+</tr>
+<tr>
+<td>10–25 分</td>
+<td><strong>觀念：傳紙條</strong></td>
+<td>投影片講 inbox/outbox/AGENTS.md 三格子接力</td>
+<td>一起在白板比劃流程</td>
+</tr>
+<tr>
+<td>25–45 分</td>
+<td><strong>裝好＋設計小隊</strong></td>
+<td>巡堂；機器若預裝好，重點放「讓 AI 訪談你設計小隊」</td>
+<td>登入帳號、讓 AI 訪談自己設計領隊/隊員</td>
+</tr>
+<tr>
+<td>45–70 分</td>
+<td><strong>第一個任務（兩種模式）</strong></td>
+<td>先帶<strong>手動接力</strong>（學生親手傳棒），再示範<strong>全自動</strong>讓大家比較</td>
+<td>對領隊下令、當小隊長傳棒，看兩個 AI 接力完成</td>
+</tr>
+<tr>
+<td>70–90 分</td>
+<td><strong>改造與分享</strong></td>
+<td>引導改名字／個性／加任務</td>
+<td>改自己的小隊、跑自己的點子、分享成果</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>時間不夠就把「裝好」改成課前作業（發 <code>02</code> 自己裝、或資訊組預裝），課堂專注在「設計、下任務、看協作、改造」。</p>
+</blockquote>
+<hr />
+<h2>四、課堂示範任務（挑一個）</h2>
+<p>都設計成「領隊拆、隊員做、領隊收」的接力，且零基礎可懂、優先用花蓮在地題材：</p>
+<ol>
+<li><strong>花蓮一日遊景點清單</strong>——隊員查景點、領隊檢查潤飾（這個我們實測過會動）。</li>
+<li><strong>花蓮三天兩夜行程單頁網頁</strong>——查景點美食、排行程、做成好看的網頁。</li>
+<li><strong>班級活動報名表單頁</strong>——標題、說明、報名欄位的靜態網頁。</li>
+<li><strong>把一段雜亂筆記整理成重點表格</strong>——練「拆解＋整理」。</li>
+</ol>
+<p><strong>手動接力模式</strong>讓學生當小隊長、親手傳棒給隊員，體會交接；玩過一輪再用<strong>全自動模式</strong>跑同一個任務，比較差別。</p>
+<hr />
+<h2>五、評量建議（重歷程，不重技術）</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>占比</th>
+<th>看什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小隊建置成功</td>
+<td>25%</td>
+<td>兩個 AI 能上線、紙條傳得通（截圖佐證）</td>
+</tr>
+<tr>
+<td>自己設計的小隊</td>
+<td>15%</td>
+<td>有沒有替夥伴取名、設定個性與分工（不只用預設）</td>
+</tr>
+<tr>
+<td>任務完成</td>
+<td>25%</td>
+<td>有產出一個成品（不要求多精緻）</td>
+</tr>
+<tr>
+<td>任務拆解品質</td>
+<td>15%</td>
+<td>領隊的任務紙條寫得清不清楚</td>
+</tr>
+<tr>
+<td>反思短文</td>
+<td>20%</td>
+<td>200 字：「我學到怎麼指揮 AI 的什麼？」</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>不評「程式寫得好不好」——這堂課不是寫程式課。評的是<strong>指揮、拆解、溝通、設計</strong>。</p>
+</blockquote>
+<hr />
+<h2>六、常見現場狀況與處理</h2>
+<table>
+<thead>
+<tr>
+<th>狀況</th>
+<th>處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一堆人卡在登入 Codex（領隊）</td>
+<td>多半是 ChatGPT 帳號或校園 proxy（見課前準備 2）；先換網路、確認帳號；真的不行先看老師示範、課後補裝領隊</td>
+</tr>
+<tr>
+<td>「領隊寫了紙條隊員看不到」</td>
+<td>99% 是兩個 app 開到<strong>不同的專案資料夾</strong>，或某個 app 沒選對資料夾；叫兩邊各自「印出專案資料夾完整路徑」對一下（<code>02</code> 常見卡關表）</td>
+</tr>
+<tr>
+<td>領隊在手動模式自己跑去叫隊員</td>
+<td>開工第一句沒講清楚模式；請學生明講「用手動模式，寫完 inbox 就停、叫我去找隊員」</td>
+</tr>
+<tr>
+<td>學生問「這算不算作弊／它會不會取代我」</td>
+<td>帶到核心訊息：工具是工具，<strong>會指揮的人才是關鍵</strong></td>
+</tr>
+<tr>
+<td>程度好的學生很快做完</td>
+<td>加分題：玩全自動模式、替小隊加規則、加第三個角色、做更完整的成品</td>
+</tr>
+<tr>
+<td>完全不想碰終端機的學生</td>
+<td>沒關係——本版<strong>以桌面 app 為主</strong>，照 <code>02</code> 用滑鼠操作即可；真卡就配 <code>04</code> 咒語貼給 AI 自救</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、延伸（給想再往前的老師）</h2>
+<ul>
+<li>加第三個 AI 變成三人小隊（呼應洄瀾團隊的洄瀾／立霧／秀姑巒）。</li>
+<li>讓學生自己設計一套「角色分工」（例如「查資料的」＋「寫文案的」＋「排版的」）。</li>
+<li>把成品集結成班級作品集網頁，當期末展示。</li>
+<li>想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材<strong>已放在公開 repo</strong> <code>github.com/cwstedctw/ai-agent-team-course</code>（只含課程內容、不含團隊私人記憶）；線上課程網站見 <a href="https://cwstedctw.github.io/ndhu-ai-courses/">https://cwstedctw.github.io/ndhu-ai-courses/</a>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。</li>
+</ul>
+<hr /></section></body></html>
