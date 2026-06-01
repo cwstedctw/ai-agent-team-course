@@ -50,7 +50,3 @@
 3. 課堂發 `01_學生講義.md` 給學生；卡關的同學丟 `04_給AI的指令包.md` 讓 AI 自救。
 4. 評量、分組、電腦教室與帳號注意事項見 `03_教師手冊.md`。
 5. 想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材**已放在公開 repo** `github.com/cwstedctw/ai-agent-team-course`（只含課程內容、不含團隊私人記憶）；線上課程網站見 <https://cwstedctw.github.io/ndhu-ai-courses/>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。
-
----
-
-【洄瀾草稿】這份教材由洄瀾統籌、立霧與秀姑巒協作，請 Ted 讀過、在電腦教室實機跑過一遍再正式發給學生。
