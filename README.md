@@ -47,6 +47,6 @@
 
 1. 先自己照 `02_安裝設定指南.md` 跑一遍，**最好在電腦教室那台 Windows 機器上**實跑一次（Mac 與 Windows 有些差異，指南最後的技術備註有列）。
 2. 上課投影片與課程網站（Claude Design 製）連結在 `slides/投影片與課程網頁.md`。
-3. 課堂發 `01_學生講義.md` 給學生；卡關的同學丟 `04_給AI的指令包.md` 讓 AI 自救。
+3. 給學生的主教材用**學生手冊 PDF**（`打造你的AI雙人小隊-學生手冊.pdf`），或請學生開[線上課程網站](https://cwstedctw.github.io/ndhu-ai-courses/)；卡關的同學把 `04_給AI的指令包.md` 裡對應的咒語貼給 AI 自救。
 4. 評量、分組、電腦教室與帳號注意事項見 `03_教師手冊.md`。
-5. 想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材**已放在公開 repo** `github.com/cwstedctw/ai-agent-team-course`（只含課程內容、不含團隊私人記憶）；線上課程網站見 <https://cwstedctw.github.io/ndhu-ai-courses/>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。
+5. 想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材**已放在公開 repo** [cwstedctw/ai-agent-team-course](https://github.com/cwstedctw/ai-agent-team-course)（只含課程內容、不含團隊私人記憶）；線上課程網站見 <https://cwstedctw.github.io/ndhu-ai-courses/>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。

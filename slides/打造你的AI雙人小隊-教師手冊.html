@@ -58,7 +58,7 @@ li { margin:3px 0; }
    - 學生用<strong>自己的 ChatGPT 帳號</strong>登入 Codex 即可——各方案（免費、Plus、Pro、學校 Edu…）都能用，只差用量限制；若上課中被限制，請學生換帳號或先看領隊示範。
    - 校園網路若用 <strong>proxy 攔 TLS</strong>，Codex 的瀏覽器 OAuth 登入可能失敗——請課前在教室網路實測一次登入。</li>
 <li><strong>電腦教室權限</strong>：兩個桌面 app（Antigravity、Codex app）在鎖很緊的 Windows 可能要資訊單位安裝。保險做法：請助教或資訊組<strong>先在教室每台機器裝好這兩個桌面 app</strong>，上課就省掉安裝、直接從「開專案資料夾」開始。</li>
-<li>課堂主流程是<strong>讓學生貼「咒語 0」給領隊 Codex，由它自動 <code>gh clone</code> 教材、把 <code>範本團隊</code> 建成學生桌面的「我的小隊」</strong>（見 <code>02</code> Part A）。⚠️ 若教室網路不穩或擋 GitHub，備援：把 <code>範本團隊/</code> 先壓成 zip／放共用雲端，讓學生直接下載當專案資料夾。</li>
+<li><strong>課堂主流程（方式 A・推薦，零終端機）</strong>：請學生下載教材 ZIP（<a href="https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip">repo 的 Download ZIP</a>，或放課程網站給連結）→ 解壓 → 把 <code>範本團隊</code> 複製到桌面改名「我的小隊」，全程滑鼠、不用 git／GitHub 帳號，電腦教室成功率最高。自帶筆電且裝了 Git 的同學可走<strong>方式 B</strong>（貼 <code>04</code> 咒語 0 讓 Codex 自動建）。詳見 <code>02</code> 開頭「先把『我的小隊』資料夾準備好」。也可把 <code>範本團隊/</code> 自行壓 zip 放校內雲端當備援。</li>
 <li>投影片與課程網站連結在 <code>slides/投影片與課程網頁.md</code>（Claude Design 製，瀏覽器打開即放映）。</li>
 </ol>
 <blockquote>
@@ -196,6 +196,10 @@ li { margin:3px 0; }
 <td>完全不想碰終端機的學生</td>
 <td>沒關係——本版<strong>以桌面 app 為主</strong>，照 <code>02</code> 用滑鼠操作即可；真卡就配 <code>04</code> 咒語貼給 AI 自救</td>
 </tr>
+<tr>
+<td><strong>全班超過 1/3 卡在 app 安裝或登入</strong></td>
+<td><strong>大絕招備援，別讓全班乾等</strong>：請卡關的同學改用<strong>網頁版 AI</strong>——瀏覽器開兩個分頁（ChatGPT 當領隊、Gemini 當隊員），手動複製貼上 <code>inbox</code>／<code>outbox</code> 的內容接力。少了自動讀檔的酷炫，但「傳紙條＋小隊長傳棒」的核心觀念完全一樣，確保 90 分鐘內人人都體驗到多代理人協作，不被環境雷毀整堂課</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -204,5 +208,5 @@ li { margin:3px 0; }
 <li>加第三個 AI 變成三人小隊（呼應洄瀾團隊的洄瀾／立霧／秀姑巒）。</li>
 <li>讓學生自己設計一套「角色分工」（例如「查資料的」＋「寫文案的」＋「排版的」）。</li>
 <li>把成品集結成班級作品集網頁，當期末展示。</li>
-<li>想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材<strong>已放在公開 repo</strong> <code>github.com/cwstedctw/ai-agent-team-course</code>（只含課程內容、不含團隊私人記憶）；線上課程網站見 <a href="https://cwstedctw.github.io/ndhu-ai-courses/">https://cwstedctw.github.io/ndhu-ai-courses/</a>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。</li>
+<li>想讓學生的 AI 直接「讀 GitHub repo 幫忙裝」：本課教材<strong>已放在公開 repo</strong> <a href="https://github.com/cwstedctw/ai-agent-team-course">cwstedctw/ai-agent-team-course</a>（只含課程內容、不含團隊私人記憶）；線上課程網站見 <a href="https://cwstedctw.github.io/ndhu-ai-courses/">https://cwstedctw.github.io/ndhu-ai-courses/</a>。⚠️ 別把團隊主 repo（含私人記憶）整包公開。</li>
 </ul></section></body></html>

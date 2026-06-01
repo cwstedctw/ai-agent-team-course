@@ -125,12 +125,12 @@ li { margin:3px 0; }
 <li><strong>指揮一個團隊、檢查成果</strong>——你是小隊長，不是工人。</li>
 </ol>
 <blockquote>
-<p>寫程式會被 AI 取代，但<strong>「會指揮 AI 的人」不會。</strong> 這堂課練的就是後者。</p>
+<p>單純做重複性的程式編碼，可能慢慢被 AI 接手；但<strong>「懂得拆解大任務、指揮一群 AI 協作的人」永遠搶手。</strong> 這堂課練的，就是這個帶得走的能力。</p>
 </blockquote>
 <hr />
 <h2>六、接下來</h2>
 <p>➡️ 打開 <strong><code>02_安裝設定指南.md</code></strong>，跟著一步一步把你的雙人小隊裝起來。
-全程免費、有中文、不用寫一行程式。</p>
+不需付費訂閱、有中文、不用寫一行程式（用你自己的 ChatGPT／Google 帳號，免費方案就能上，只是有用量限制）。</p>
 <p>卡關了？打開 <strong><code>04_給AI的指令包.md</code></strong>，把裡面的字整段複製、貼給 AI，請它自己幫你修。</p></section>
 <section class="doc"><h1>安裝設定指南｜把你的 AI 雙人小隊裝起來</h1>
 <blockquote>
@@ -153,28 +153,32 @@ li { margin:3px 0; }
 <h2>核心觀念：一個「專案資料夾」，兩個夥伴都開它 🔑</h2>
 <p>你的小隊住在<strong>一個資料夾</strong>裡——這就是你的「<strong>專案資料夾</strong>」。
 <strong>領隊和隊員都要打開「同一個這個資料夾」</strong>，才傳得到紙條、才合作得起來。<strong>全班最常卡的就是兩邊開到不同資料夾。</strong></p>
-<h3>📂 「我的小隊」資料夾怎麼來？——交給領隊 Codex 建</h3>
-<p>別擔心怎麼下載、怎麼複製、怎麼改名。等一下你<strong>裝好領隊 Codex、登入</strong>，<strong>貼一句話（咒語 0）給它</strong>，它就會自動幫你：下載這門課的教材、建好你桌面的「<strong>我的小隊</strong>」資料夾、檢查環境，最後把資料夾路徑印給你。你只要照 <strong>Part A</strong> 做。</p>
+<h3>📂 先把「我的小隊」資料夾準備好（挑一種方式）</h3>
 <blockquote>
-<p>這就是這門課的精神：<strong>能交給 AI 做的就交給 AI 做。</strong> 你負責登入帳號、下指令；繁瑣的下載與設定，交給領隊。</p>
+<p>⚠️ <strong>重要：等一下你電腦會有兩個資料夾，用途不同、別搞混！</strong>
+- <strong>教材資料夾</strong>（解壓縮得到的 <code>ai-agent-team-course…</code>）＝<strong>你的課本</strong>。要複製咒語、看講義時，用瀏覽器或記事本打開裡面的檔（如 <code>04_給AI的指令包.md</code>）。
+- <strong><code>我的小隊</code></strong>＝<strong>你的專案資料夾</strong>，兩個 AI 夥伴住的地方。<strong>Codex 和 Antigravity 兩個 app 都要打開這一個。</strong></p>
 </blockquote>
+<p><strong>方式 A（電腦教室標準・推薦）——全程滑鼠、不用終端機、不用 GitHub 帳號</strong>
+1. <strong>下載教材 ZIP</strong>：打開這個連結（老師也會在課程網站給）：
+   <a href="https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip">https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip</a>，存到桌面。
+2. <strong>解壓縮</strong>：得到一個 <code>ai-agent-team-course-master</code> 資料夾（這就是「教材資料夾」）。
+3. 進去找到 <strong><code>範本團隊</code></strong> 資料夾，<strong>整包複製到桌面、改名為 <code>我的小隊</code></strong>（中文名超好認）。
+4. 完成！桌面現在有你的 <strong><code>我的小隊</code></strong>。接著照 <strong>Part A</strong> 讓兩個 app 都打開它。</p>
+<p><strong>方式 B（自帶筆電・進階）——讓領隊 Codex 自動幫你建</strong>
+電腦已裝好 Git 的同學，可裝好 Codex 後貼 <code>04</code> 的<strong>咒語 0</strong>，讓領隊自動下載教材、建好桌面的 <code>我的小隊</code>（細節與防呆見 <code>04</code> 咒語 0）。沒裝 Git 也不想裝的，用方式 A 最快。</p>
 <hr />
-<h1>Part A：先請領隊就位、幫你把小隊建起來（Codex app）</h1>
+<h1>Part A：兩個 app 都打開「我的小隊」——先請領隊 Codex 就位</h1>
 <blockquote>
-<p>這門課裡 <strong>Codex 是領隊洄瀾</strong>——它能「電腦操作」、也能幫你跑下載與設定，所以讓它先就位、帶起整個小隊。</p>
+<p>這門課裡 <strong>Codex 是領隊洄瀾</strong>，先讓它就位、帶起整個小隊。</p>
 </blockquote>
 <ol>
 <li>裝 <strong>Codex app</strong>（官方桌面版），打開後<strong>用你自己的 ChatGPT 帳號登入</strong>（登入你自己來）。</li>
-<li>先讓它開<strong>你的桌面</strong>當臨時工作區：點 <strong>Select a project／選擇專案資料夾</strong>，選「<strong>桌面 Desktop</strong>」（等一下小隊建好再換過去）。</li>
-<li><strong>貼「咒語 0」</strong>（在 <code>04_給AI的指令包.md</code>）給它、送出。它會自動：用 <code>gh repo clone cwstedctw/ai-agent-team-course</code> 下載教材、把裡面的 <code>範本團隊</code> 複製成你桌面的 <strong><code>我的小隊</code></strong>、檢查環境（含 Antigravity 的 <code>agy</code>），最後印出 <strong><code>我的小隊</code></strong> 的完整路徑。<blockquote>
-<p>過程中要你登入或做決定，它會停下來問你。若它說你電腦沒有 <code>gh</code>，照它的話做（它會改用 <code>git clone</code> 或教你裝）。<strong>桌面版 Antigravity 還是你自己裝</strong>（Part C），Codex 只幫你把專案建好。</p>
+<li>點 <strong>Select a project／選擇專案資料夾</strong>，選你剛準備好的桌面 <strong><code>我的小隊</code></strong> 資料夾。<blockquote>
+<p>⚠️ <strong>Windows 防呆</strong>：彈出的「選擇資料夾」視窗<strong>只顯示資料夾、把檔案（如 <code>AGENTS.md</code>）藏起來</strong>。正常！確認選中 <strong><code>我的小隊</code></strong>，點右下角 <strong>「選擇資料夾」</strong> 即可。</p>
 </blockquote>
 </li>
-<li><strong>關掉 Codex、再打開一次</strong>，這次 <strong>Select a project 選剛建好的 <code>我的小隊</code></strong>。<blockquote>
-<p>⚠️ <strong>Windows 防呆</strong>：點「Select a project」彈出的「選擇資料夾」視窗<strong>只顯示資料夾、把檔案（如 <code>AGENTS.md</code>）藏起來</strong>。正常！確認選中 <strong><code>我的小隊</code></strong>，點右下角 <strong>「選擇資料夾」</strong> 即可。</p>
-</blockquote>
-</li>
-<li>確認畫面顯示 <strong>Local</strong>；對它說一句（咒語 1）：<code>請先讀這個資料夾的 AGENTS.md，告訴我你的身分。</code> → 它會認出自己是<strong>領隊洄瀾</strong>，並印出專案資料夾路徑。</li>
+<li>確認畫面顯示 <strong>Local</strong>；貼<strong>咒語 1</strong>：<code>請先讀這個資料夾的 AGENTS.md，告訴我你的身分。</code> → 它會認出自己是<strong>領隊洄瀾</strong>，並印出專案資料夾完整路徑（記住這個路徑，等一下隊員要開同一個）。</li>
 </ol>
 <blockquote>
 <p>🛠️ 進階（會用終端機的人才需要）：也可以在 <code>我的小隊</code> 裡直接跑 <code>codex</code>。一般同學用桌面 app 就好。</p>
@@ -198,7 +202,7 @@ li { margin:3px 0; }
 <li>對它說一句：<code>請先讀這個資料夾的 AGENTS.md，告訴我你的身分。</code> → 它會認出自己是<strong>隊員太魯閣</strong>。</li>
 </ol>
 <blockquote>
-<p>🛠️ 進階：也可用 CLI——在 <code>我的小隊</code> 資料夾裡跑 <code>agy --add-dir .</code>。</p>
+<p>🛠️ 進階：也可用 CLI——在 <code>我的小隊</code> 資料夾裡跑 <code>agy</code>，進入後輸入 <code>/add-dir .</code> 把這個資料夾加進來。</p>
 </blockquote>
 <hr />
 <h1>Part D：開工！選一種模式，下第一個任務</h1>
@@ -213,10 +217,14 @@ li { margin:3px 0; }
 <p>🎉 你剛當了一次小隊長，親手指揮兩個 AI 接力完成一件事——全程只動嘴、沒寫半行程式。</p>
 <h3>模式二：全自動（省事）</h3>
 <p>跟領隊說：<code>這次用自動模式，幫我把整件事跑完、檢查好、直接回報我。</code></p>
+<blockquote>
+<p>小提醒：這是「<strong>領隊一個人</strong>」把事做完（單人全自動）。要讓領隊<strong>自動叫隊員</strong>做到「雙人全自動」，需要進階的 <code>agy</code> CLI 或 Computer Use（見模式三）；課堂用單人全自動體會「交給 AI」就夠了。</p>
+</blockquote>
 <h3>模式三（進階示範）：領隊用 Computer Use 自己跑完手動接力 ⭐</h3>
 <p>領隊（Codex）能用「<strong>電腦操作（Computer Use）</strong>」當你的雙手——自己切到隊員 Antigravity 的視窗、貼指令、再回收檢查，把手動接力<strong>自動演一遍</strong>給你看。做法見 <code>04</code> 咒語 9。</p>
 <blockquote>
-<p>⚠️ 需要較新的 Windows／Mac；執行時它會<strong>接管你的滑鼠鍵盤、佔住前景</strong>（你會看著它自己動）。<strong>不是每台機器都跑得動，當示範用，不是基本盤。</strong></p>
+<p>⚠️ 需要較新的 Windows／Mac；執行時它會<strong>接管你的滑鼠鍵盤、佔住前景</strong>（你會看著它自己動）。<strong>不是每台機器都跑得動，當示範用，不是基本盤。</strong> 另需先到 Codex 設定裡開啟 Computer Use、允許它操作 Antigravity 視窗（見 <code>04</code> 咒語 9）。
+💡 <strong>心理建設</strong>：看到滑鼠鍵盤自己動，是 AI 在工作、<strong>不是中毒也不是被駭</strong>，別緊張——把手離開鍵盤，看它表演就好。</p>
 <p>兩三種都玩一次，感受差別：<strong>手動＝你掌控、看得見；自動＝快、交給 AI；Computer Use＝看 AI 替你動手。</strong> 這就是「要不要讓人插手」——AI 時代最重要的判斷之一。</p>
 </blockquote>
 <hr />
@@ -269,29 +277,32 @@ li { margin:3px 0; }
 <p><strong>Computer Use（模式三，進階）</strong>
 - Codex app（v26.527 起）在 <strong>Windows</strong> 可「看畫面、點按鈕、打字」操作桌面程式（<a href="https://developers.openai.com/codex/app/computer-use">Computer Use 文件</a>）。⚠️ Windows 上跑在<strong>使用中的桌面、不能背景跑</strong>，執行時接管前景滑鼠鍵盤；手機遠端管理那套要 Win11 build 26100＋NPU。<strong>所以核心課程不依賴它，只當示範。</strong></p>
 <p><strong>AGENTS.md／身分</strong>
-- codex 與 agy <strong>都讀專案根目錄的 <code>AGENTS.md</code></strong>，開機自動認身分（codex app 選那個資料夾、agy 桌面版開那個資料夾即可）。沒有用 <code>.agents/</code> 子資料夾。
+- codex <strong>會自動讀</strong>專案根目錄的 <code>AGENTS.md</code>（OpenAI 官方文件明載），開機自動認身分。<strong>Antigravity 不保證會自動讀</strong>，所以隊員第一句一律明確要它「<strong>先讀這個資料夾的 AGENTS.md</strong>」（Part C 步驟 4／咒語都含這句）。沒有用 <code>.agents/</code> 子資料夾；若要讓 Antigravity 自動套用，可在它的 Rules 介面把 <code>AGENTS.md</code> 設為 Always On。
 - 保險起見可叫 agent 第一句報到時「印出專案資料夾完整路徑」，確認兩邊同一個。</p>
 <p><strong>機制說明</strong>：兩個 agent 透過 <code>inbox</code>／<code>outbox</code> 互傳紙條的整條協作鏈，已驗證可正常運作。</p></section>
 <section class="doc"><h1>給 AI 的指令包｜把事情交給 AI 做</h1>
 <blockquote>
 <p>用法：下面每段是一個「咒語」。<strong>整段複製</strong>，貼進你正在用的 AI（領隊洄瀾＝Codex、隊員太魯閣＝Antigravity，桌面 app 或終端機都行），按 Enter，請它幫你做。
-咒語裡的「洄瀾／太魯閣」是預設名，你改過就跟著換。<strong>你（學生）＝小隊長。</strong></p>
+咒語裡的「洄瀾／太魯閣」是預設名，你改過就跟著換。<strong>你（學生）＝小隊長。</strong>
+⚠️ 咒語 0／2／5／7 需要 AI 能讀寫你電腦上的專案資料夾，要用<strong>本機的 Codex／Antigravity app</strong>；網頁版 AI（ChatGPT／Gemini 網頁）沒有手、只能當「導航」教你怎麼點。</p>
 </blockquote>
 <hr />
-<h2>咒語 0：請領隊把我的小隊裝起來（第一步，貼給剛裝好＋登入的 Codex）⭐</h2>
+<h2>咒語 0：請領隊把我的小隊裝起來（方式 B・進階，貼給剛裝好＋登入的 Codex）⭐</h2>
 <blockquote>
-<p>貼給<strong>領隊 Codex</strong>（這時它開在你的「桌面」當臨時工作區）。它會幫你下載教材、建好「我的小隊」。
-桌面版 Antigravity 還是你自己裝（見指南 Part C），這條只負責把專案建好。</p>
+<p>給「<strong>自帶筆電、電腦已裝 Git</strong>」的同學。<strong>電腦教室或沒裝 Git 的，用指南「方式 A」下載 ZIP 最快、不必貼這條。</strong>
+貼給領隊 Codex（這時它開在你的「桌面」當臨時工作區）。桌面版 Antigravity 仍你自己裝（指南 Part C）。</p>
 </blockquote>
-<pre><code>請幫我把這門課的「AI 雙人小隊」設定好，一步一步做、需要我決定時停下來問我：
-1. 在我的桌面下載這門課教材：執行 gh repo clone cwstedctw/ai-agent-team-course
-   （若我這台沒有 gh，改用 git clone https://github.com/cwstedctw/ai-agent-team-course.git，
-    或先告訴我怎麼裝 gh）。
-2. 進到下載好的資料夾，把裡面的「範本團隊」整包複製到我的桌面，改名為「我的小隊」。
-3. 檢查我這台有沒有 Antigravity 的命令列 agy；沒有的話只要告訴我即可
-   （桌面版 Antigravity 我會自己去 antigravity.google/download 裝，不用你裝）。
-4. 把「我的小隊」資料夾的完整路徑印出來給我（等一下兩個 app 都要開這個資料夾）。
-做完用白話告訴我下一步：關掉你、再打開、Select a project 選「我的小隊」。全程繁體中文台灣用語。
+<pre><code>請幫我把這門課的「AI 雙人小隊」設定好。一步一步做，每跑一個指令前先用白話說你要做什麼；
+看到要我「允許執行指令」的提示，我確認是 GitHub 或我的桌面後會按允許：
+1. 先偵測我的「桌面」實際路徑並印出來（Windows 用 PowerShell [Environment]::GetFolderPath('Desktop')、
+   Mac 用 ~/Desktop；注意 Windows 可能是 OneDrive 底下的桌面）。
+2. 檢查我這台有沒有 git：
+   - 有 git → 在桌面執行 git clone https://github.com/cwstedctw/ai-agent-team-course.git
+   - 沒有 git → 不要叫我裝，改用下載 ZIP：抓 https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip 解壓到桌面。
+3. 把下載到的資料夾裡的「範本團隊」整包複製到桌面，改名為「我的小隊」。
+   若桌面已經有「我的小隊」，先停下來問我：要覆蓋、還是改名成「我的小隊-2」。
+4. 把「我的小隊」的完整路徑印出來給我（兩個 app 等一下都要開這個資料夾）。
+做完用白話告訴我下一步：關掉你、再打開、Select a project 選「我的小隊」。需要我登入或決定時停下來問我。全程繁體中文台灣用語。
 </code></pre>
 <hr />
 <h2>咒語 1：報到＋確認環境＋印出專案資料夾路徑</h2>
@@ -309,7 +320,8 @@ li { margin:3px 0; }
 <p>貼給<strong>領隊洄瀾（Codex）</strong>。</p>
 </blockquote>
 <pre><code>我想設計一個我自己的 AI 雙人小隊。請你「一題一題問我」，問完幫我把設定寫進這個專案資料夾的
-AGENTS.md、領隊人格檔、隊員人格檔：
+AGENTS.md、領隊人格檔（領隊-洄瀾.md）、隊員人格檔（隊員-太魯閣.md）——改名字時只改檔案內容、
+保留原檔名不變，免得資料夾長出一堆多餘的人格檔：
 1. 領隊要叫什麼名字、什麼個性？
 2. 隊員要叫什麼名字、什麼個性？
 3. 我最想用這個小隊做什麼（例如排旅遊行程、做報告、整理筆記）？
@@ -360,7 +372,8 @@ shared 傳紙條；預設「手動接力」模式、可切「全自動」；全�
 <blockquote>
 <p>貼給<strong>領隊洄瀾（Codex，支援 Computer Use／電腦操作）</strong>。
 這條咒語示範讓領隊扮演「學生的雙手」，在手動模式下自己切換視窗、貼指令並完成完整的手動接力驗收！
-⚠️ 需要較新的 Windows／Mac；執行時會接管你的滑鼠鍵盤、佔住前景。當示範用，不是基本盤。</p>
+⚠️ 需要較新的 Windows／Mac；執行時會接管你的滑鼠鍵盤、佔住前景。當示範用，不是基本盤。
+前提：先到 Codex 設定裡安裝／開啟 Computer Use，並允許它操作 Antigravity 視窗（Mac 還要給「螢幕錄製／輔助使用」權限）。看到滑鼠自己動是 AI 在工作、不是中毒，別緊張。</p>
 </blockquote>
 <pre><code>請用 Computer Use 幫我操作 Antigravity（隊員）視窗，完成一次手動接力流程。
 
