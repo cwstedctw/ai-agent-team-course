@@ -102,7 +102,7 @@ li { margin:3px 0; }
 </ol>
 <p>你就像一個小隊長，在兩個夥伴之間<strong>傳遞棒子</strong>——這樣整個團隊你看得到、也指揮得到。</p>
 <blockquote>
-<p>想更省事？也可以叫領隊用「<strong>全自動模式</strong>」：它自己叫隊員、自己收尾，你只跟領隊講話就好。<strong>手動接力</strong>（你親自傳棒）和<strong>全自動</strong>兩種玩法課堂都會教，你自己選。</p>
+<p>想更省事？也可以叫領隊用「<strong>全自動模式</strong>」：它自己把整件事做完、檢查好、直接回報你，你只跟領隊講話就好（這版是<strong>領隊一個人</strong>完成；要它<strong>自動叫隊員</strong>是進階玩法，見安裝指南「模式三」）。<strong>手動接力</strong>（你親自傳棒）和<strong>全自動</strong>兩種玩法課堂都會教，你自己選。</p>
 </blockquote>
 <p><strong>這就是「多代理人協作」(multi-agent collaboration)——2026 年最重要的 AI 技能之一。</strong></p>
 <hr />
@@ -163,13 +163,13 @@ li { margin:3px 0; }
 1. <strong>下載教材 ZIP</strong>：打開這個連結（老師也會在課程網站給）：
    <a href="https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip">https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip</a>。</p>
 <blockquote>
-<p>💡 存哪都行，但<strong>盡量別放桌面</strong>——Windows 桌面常被 OneDrive 同步鎖檔，AI 寫入時容易出怪錯；放「文件」之類的一般資料夾最穩。
+<p>💡 放哪都行，但<strong>別放在會被雲端同步的地方</strong>（桌面、OneDrive、iCloud 同步的資料夾）——同步會鎖住檔案，害 AI 寫入時出怪錯。放一個<strong>一般的本機資料夾</strong>最穩（例如在 C 槽底下自己建一個）。
 2. <strong>解壓縮</strong>：得到一個 <code>ai-agent-team-course-master</code> 資料夾（這就是「教材資料夾」，也是你這門課的<strong>工作資料夾</strong>，東西都放它裡面）。
 3. 進去找到 <strong><code>範本團隊</code></strong> 資料夾，<strong>就在這裡複製一份、改名為 <code>我的小隊</code></strong>（這樣教材和你的小隊都在同一個資料夾裡，好整理）。
 4. 完成！接著照 <strong>Part A</strong>，在兩個 app 裡<strong>選這個 <code>我的小隊</code></strong>（路徑 <code>ai-agent-team-course-master/我的小隊</code>）——選資料夾本來就是用這些 app 的第一步。</p>
 </blockquote>
 <p><strong>方式 B（自帶筆電・進階）——讓領隊 Codex 自動幫你建</strong>
-電腦已裝好 Git 的同學，可裝好 Codex 後貼 <code>04</code> 的<strong>咒語 0</strong>，讓領隊自動下載教材、在它目前的工作資料夾裡建好 <code>我的小隊</code>（細節與防呆見 <code>04</code> 咒語 0）。沒裝 Git 也不想裝的，用方式 A 最快；想裝起來用 GitHub 的，看下面這段。</p>
+電腦已裝好 Git 的同學：裝好 Codex 後，<strong>先用 <code>Select a project</code> 選一個現成、不被雲端同步的資料夾當起點</strong>（例如在 C 槽自己建一個空資料夾），模式選 <code>Local</code>，再貼 <code>04</code> 的<strong>咒語 0</strong>，讓領隊自動 clone 教材、在那個資料夾裡建好 <code>我的小隊</code>；建完關掉 Codex 重開、改選它印出的 <code>我的小隊</code>（細節與防呆見 <code>04</code> 咒語 0）。<strong>沒裝 Git 的別貼咒語 0，直接走方式 A 最快</strong>；想裝起來用 GitHub 的，看下面這段。</p>
 <blockquote>
 <p>🧰 <strong>進階加裝：Git ＋ GitHub CLI（想直接用 GitHub 的同學）</strong>
 方式 A 的 ZIP 下載<strong>完全不需要</strong>這些。但如果你想用一行指令直接抓教材、或之後把自己的成品推上 GitHub，裝這兩個會順很多（需要一個<strong>免費 GitHub 帳號</strong>）：
@@ -190,7 +190,7 @@ li { margin:3px 0; }
 </blockquote>
 <ol>
 <li>裝 <strong>Codex app</strong>（官方桌面版），打開後<strong>用你自己的 ChatGPT 帳號登入</strong>（登入你自己來）。</li>
-<li>點 <strong>Select a project／選擇專案資料夾</strong>，選你剛準備好的 <strong><code>我的小隊</code></strong> 資料夾。<blockquote>
+<li>點 <strong>Select a project／選擇專案資料夾</strong>，選你剛準備好的 <strong><code>我的小隊</code></strong> 資料夾（<strong>注意是選 <code>我的小隊</code>，不是外層的教材資料夾</strong>）。<blockquote>
 <p>⚠️ <strong>Windows 防呆</strong>：彈出的「選擇資料夾」視窗<strong>只顯示資料夾、把檔案（如 <code>AGENTS.md</code>）藏起來</strong>。正常！確認選中 <strong><code>我的小隊</code></strong>，點右下角 <strong>「選擇資料夾」</strong> 即可。</p>
 </blockquote>
 </li>
@@ -306,18 +306,18 @@ li { margin:3px 0; }
 <h2>咒語 0：請領隊把我的小隊裝起來（方式 B・進階，貼給剛裝好＋登入的 Codex）⭐</h2>
 <blockquote>
 <p>給「<strong>自帶筆電、電腦已裝 Git</strong>」的同學。<strong>電腦教室或沒裝 Git 的，用指南「方式 A」下載 ZIP 最快、不必貼這條。</strong>
-貼給領隊 Codex（它會在自己目前開著的工作資料夾裡幫你建好）。桌面版 Antigravity 仍你自己裝（指南 Part C）。</p>
+貼給領隊 Codex（<strong>先 <code>Select a project</code> 選一個現成、不被雲端同步的資料夾當起點，模式選 <code>Local</code>，再貼本咒語</strong>）。桌面版 Antigravity 仍你自己裝（指南 Part C）。</p>
 </blockquote>
 <pre><code>請幫我把這門課的「AI 雙人小隊」設定好。一步一步做，每跑一個指令前先用白話說你要做什麼；
-看到要我「允許執行指令」的提示，我確認是 GitHub 或我目前的工作資料夾後會按允許：
-1. 先印出你目前的工作資料夾（current working directory）完整路徑給我看——接下來都在這個資料夾裡做。
-   （別放到桌面：Windows 桌面常被 OneDrive 同步鎖檔，等一下你寫檔容易出怪錯。）
-2. 檢查我這台有沒有 git：
-   - 有 git → 在目前這個資料夾執行 git clone https://github.com/cwstedctw/ai-agent-team-course.git
-   - 沒有 git → 不要叫我裝，改用下載 ZIP：抓 https://github.com/cwstedctw/ai-agent-team-course/archive/refs/heads/master.zip 解壓到目前這個資料夾。
-3. 把下載到的資料夾裡的「範本團隊」整包複製一份、改名為「我的小隊」（放在同一個地方就好）。
+看到要我「允許執行指令」的提示，我確認後會按允許：
+1. 先印出你現在打開的資料夾（工作目錄）完整路徑給我看。確認這個路徑「不含 OneDrive、Desktop、桌面、iCloud」；
+   如果有，先停下來提醒我，引導我換到一個不被雲端同步的資料夾再繼續（雲端同步會鎖檔、害你等下寫檔出錯）。
+2. 檢查我這台有沒有 git（git --version）。
+   如果「沒有」git，先停下來叫我改走指南「方式 A」下載 ZIP，不要自己幫我下載（現場自動下載解壓變數太多）。
+3. 有 git → 在目前這個資料夾執行 git clone https://github.com/cwstedctw/ai-agent-team-course.git
+4. 找出 clone 出來、裡面看得到「範本團隊」的那個教材資料夾，把「範本團隊」整包複製一份、改名為「我的小隊」（放在同一個地方就好）。
    若已經有「我的小隊」，先停下來問我：要覆蓋、還是改名成「我的小隊-2」。
-4. 把「我的小隊」的完整路徑印出來給我（兩個 app 等一下都要開這個資料夾）。
+5. 把「我的小隊」的完整路徑印出來給我（兩個 app 等一下都要開這個資料夾）。
 做完用白話告訴我下一步：關掉你、再打開、Select a project 選「我的小隊」。需要我登入或決定時停下來問我。全程繁體中文台灣用語。
 </code></pre>
 <hr />

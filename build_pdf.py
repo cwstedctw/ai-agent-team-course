@@ -6,7 +6,14 @@ build_pdf.py — 把課程 md 生成「學生手冊」「教師手冊」HTML，�
 
 用法（這台已驗證）：
   uv run --with markdown python build_pdf.py        # 生 HTML
-  # 再各跑一次 Chrome headless 印 PDF（見 README/RUN 或下方 PRINT 提示）
+  # 再各跑一次 Chrome headless 印 PDF（兩本手冊各一次）：
+  # Windows:
+  #   & "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless --disable-gpu --no-pdf-header-footer \
+  #     --print-to-pdf="打造你的AI雙人小隊-學生手冊.pdf" "slides/打造你的AI雙人小隊-學生手冊.html"
+  #   （教師手冊把上面兩個檔名的「學生」換成「教師」再跑一次）
+  # Mac:
+  #   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer \
+  #     --print-to-pdf="打造你的AI雙人小隊-學生手冊.pdf" "slides/打造你的AI雙人小隊-學生手冊.html"
 
 Windows 字型用「Microsoft JhengHei」；Mac 用「PingFang TC」，字型堆疊都列了。
 """
